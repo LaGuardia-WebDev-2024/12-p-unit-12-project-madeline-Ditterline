@@ -23,21 +23,21 @@ Select ONE Additional Feature to Add
   <body>
     <h1>Quiz About [Me]</h1>
     <hr />
-    <!-- Movie Question -->
-    <form id="movie-form">
+    <!-- freetime Question -->
+    <form id="freetime-form">
       <label>
-        🎥 What is my favorite movie?
-        <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+         What do I do after school?
+        <select id="freetime-answer">
+          <option value="freetime1">Play D&D</option>
+          <option value="freetime2">Read</option>
+          <option value="freetime3">Do Homework</option>
+          <option value="freetime4">3 hours of rehearsal</option>
         </select>
       </label>
-      <button type="submit">Check Movie Answer</button>
+      <button type="submit">Check freetime Answer</button>
     </form>
-    <div id="movie-result">
-      <p id="movie-text"></p>
+    <div id="freetime-result">
+      <p id="freetime-text"></p>
     </div>
     <hr />
     <!-- Book Question -->
@@ -45,10 +45,10 @@ Select ONE Additional Feature to Add
       <label>
         📖 What is my favorite book?
         <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+          <option value="book1">Six Of Crows</option>
+          <option value="book2">ACOTAR</option>
+          <option value="book3">Babel</option>
+          <option value="book4">All Our Hidden Gifts</option>
         </select>
       </label>
       <button type="submit">Check Book Answer</button>
@@ -59,18 +59,24 @@ Select ONE Additional Feature to Add
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       
-      //========================Movie Question jQuery Code
-      $("#movie-form").on("submit", function (event) {
+      //========================freetime Question jQuery Code
+      $("#freetime-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#movie-answer");
+        var $answer = $("#freetime-answer");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
-          $("#movie-text").text("YESSSS!");
+        if (answer === "freetime4") {
+          $("#freetime-text").text("YESSSS!");
         } 
-        else {
-          $("#movie-text").text("Try Again!");
+        if (answer === "freetime3"){
+          $("#freetime-text").text("Bold of you to assume I do my homework.");
+        }
+        if(answer === "freetime2"){
+          $("#freetime-text").text("That would be nice, but no.");
+        }
+        if(answer === "freetime1"){
+          $("#freetime-text").text("I wishhhhhhhhh.");
         }
       });
 
@@ -81,11 +87,17 @@ Select ONE Additional Feature to Add
         var $answer = $("#book-answer");
         var answer = $answer.val();
 
-        if (answer === "book1") {
+        if (answer === "book3") {
           $("#book-text").text("YESSSS!");
         } 
-        else {
-          $("#book-text").text("Try Again!");
+        if(answer === "book2") {
+          $("#book-text").text("I have never read this book.")
+        }
+        if(answer === "book1"){
+          $("#book-text").text("I love this book, but no.")
+        }
+        if(answer === "book4"){
+          $("#book-text").text("I love this book, but no.")
         }
       });
       

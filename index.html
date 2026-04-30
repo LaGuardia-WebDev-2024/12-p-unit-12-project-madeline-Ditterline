@@ -1,6 +1,6 @@
 <!-- Unit 12 Project
 Requirements
-[  ] Two Interactive Drop-down Inputs 
+[yes] Two Interactive Drop-down Inputs 
 [  ] Standard Animation
 [  ] Custom Animation
 [  ] Include Three Images
@@ -10,7 +10,7 @@ Select ONE Additional Feature to Add
 [ no ] Feature 2 - Chain jQuery Methods
 [ no ] Feature 3 - .mouseover() & .mouseOut() Methods
 [ no ] Feature 4 - :hover Feature 
-[ no ] Feature 5 - Add an Additional Interactive Drop-down
+[ yes ] Feature 5 - Add an Additional Interactive Drop-down
 -->
 
 <!DOCTYPE html>
@@ -34,16 +34,31 @@ Select ONE Additional Feature to Add
           <option value="freetime4">3 hours of rehearsal</option>
         </select>
       </label>
-      <button type="submit">Check freetime Answer</button>
+      <button type="submit">Check Freetime Answer</button>
     </form>
     <div id="freetime-result">
       <p id="freetime-text"></p>
     </div>
     <hr />
+    <!-- lunch Question -->
+     <form id="lunch-form">
+      <label>
+        Where do I go during lunch?
+        <select id="lunch-answer">
+          <option value="lunch1">Lunchroom</option>
+          <option value="lunch2">Library</option>
+          <option value="lunch3">Outside</option>
+      </select>
+        </label>
+      <button type="submit">Check Lunch Answer</button>
+     </form>
+     <div id="lunch-result">
+      <p id="lunch-text"></p>
+     </div>
     <!-- Book Question -->
     <form id="book-form">
       <label>
-        📖 What is my favorite book?
+        What is my favorite book?
         <select id="book-answer">
           <option value="book1">Six Of Crows</option>
           <option value="book2">ACOTAR</option>
@@ -80,6 +95,23 @@ Select ONE Additional Feature to Add
         }
       });
 
+      //=======================Lunch Question jQuery Code
+      $("#lunch-form").on("submit", function(event){
+        event.preventDefault();
+      
+      var $answer = $("#lunch-answer");
+      var answer = $answer.val();
+
+      if(answer === "lunch1"){
+        $("#lunch-text").text("Sometimes, but not most days.");
+      }
+      if (answer === "lunch2"){
+        $("#lunch-text").text("YESSS!!!");
+      }
+      if(answer === "lunch3"){
+        $("#lunch-text").text("No, I don't see the sun.");
+      }
+    })
       //=======================Book Question jQuery Code
       $("#book-form").on("submit", function (event) {
         event.preventDefault();
@@ -91,13 +123,13 @@ Select ONE Additional Feature to Add
           $("#book-text").text("YESSSS!");
         } 
         if(answer === "book2") {
-          $("#book-text").text("I have never read this book.")
+          $("#book-text").text("I have never read this book.");
         }
         if(answer === "book1"){
-          $("#book-text").text("I love this book, but no.")
+          $("#book-text").text("I love this book, but no.");
         }
         if(answer === "book4"){
-          $("#book-text").text("I love this book, but no.")
+          $("#book-text").text("I love this book, but no.");
         }
       });
       

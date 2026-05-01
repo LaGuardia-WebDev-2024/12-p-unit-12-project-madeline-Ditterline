@@ -3,7 +3,7 @@ Requirements
 [yes] Two Interactive Drop-down Inputs 
 [  ] Standard Animation
 [  ] Custom Animation
-[  ] Include Three Images
+[yes] Include Three Images
 
 Select ONE Additional Feature to Add  
 [ no ] Feature 1 - Google Font
@@ -38,6 +38,10 @@ Select ONE Additional Feature to Add
     </form>
     <div id="freetime-result">
       <p id="freetime-text"></p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Dungeons_and_Dragons_game.jpg?utm_source=en.wikiquote.org&utm_campaign=index&utm_content=original" id="d&dimg">
+      <img src="https://www.verywellmind.com/thmb/mvM32_vKi__kMVqXh7tkEpClpbk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1957612313-0c3389991ada4c5fb7c34fe68ea6e682.jpg" id="readingimg">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Homework_-_vector_maths.jpg/500px-Homework_-_vector_maths.jpg" id="hwimg">
+      <img src="https://s3-media0.fl.yelpcdn.com/bphoto/71YzQuvvTVUdSBvgWCn3HA/348s.jpg" id="lagimg">
     </div>
     <hr />
     <!-- lunch Question -->
@@ -54,6 +58,9 @@ Select ONE Additional Feature to Add
      </form>
      <div id="lunch-result">
       <p id="lunch-text"></p>
+      <img src="https://whstoday.com/wp-content/uploads/2024/09/lunchroom.jpg" id="randomlunchroomimg">
+      <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUB2sO--nASiJ4NsvjJZ5NjFZ2WVkEkbPEDnDhhOFXR2_hgXMXbef-ykUDgKoKR3KLCXm216NXfO1aH-CmesRSVWN5M1t-fsi7gCuo0N-wR7g1F-oIIUk8TdiXAy6rTWeRmjpWBvNHLEjyilq9MwBRwZvZDerUU7epyFFcuO7PAaD5IBEyPvRs_IP8LlKY3OYUanV2ZqRpGFJEFBIhhPbZVbxOK2n4fwi5oX6uc=w1280" id="lagbraryimg">
+      <img src="https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/9ee5a203-4d33-40c4-905f-350c49e0ba44/dvwbgmjqbalbxzwlak4p.jpg" id="outsideimg">
      </div>
     <!-- Book Question -->
     <form id="book-form">
@@ -70,10 +77,26 @@ Select ONE Additional Feature to Add
     </form>
     <div id="book-result">
       <p id="book-text"></p>
+      <img src="https://target.scene7.com/is/image/Target/GUEST_b53ea8c0-339c-4d31-90d4-8fdf06a21b9b" id="socimg">
+      <img src="https://target.scene7.com/is/image/Target/GUEST_26530d3b-1c9d-493d-a406-be6e7aaf4592" id="babelimg">
+      <img src="https://target.scene7.com/is/image/Target/GUEST_3fdc218c-e35b-4085-a575-e73744a320e6" id="acotarimg">
+      <img src="https://target.scene7.com/is/image/Target/GUEST_30362420-ffbb-4acf-a7bf-b9158c000268" id="aohgimg">
+      
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
-      
+      //========================bullshit
+      $("#socimg").hide();
+      $("#aohgimg").hide();
+      $("#acotarimg").hide();
+      $("#babelimg").hide();
+      $("#lagbraryimg").hide();
+      $("#randomlunchroomimg").hide();
+      $("#outsideimg").hide();
+      $("#lagimg").hide();
+      $("#hwimg").hide();
+      $("#readingimg").hide();
+      $("#d&dimg").hide();
       //========================freetime Question jQuery Code
       $("#freetime-form").on("submit", function (event) {
         event.preventDefault();

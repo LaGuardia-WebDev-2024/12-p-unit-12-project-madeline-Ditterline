@@ -38,7 +38,7 @@ Select ONE Additional Feature to Add
     </form>
     <div id="freetime-result">
       <p id="freetime-text"></p>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Dungeons_and_Dragons_game.jpg?utm_source=en.wikiquote.org&utm_campaign=index&utm_content=original" id="d&dimg">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Dungeons_and_Dragons_game.jpg?utm_source=en.wikiquote.org&utm_campaign=index&utm_content=original" id="dndimg">
       <img src="https://www.verywellmind.com/thmb/mvM32_vKi__kMVqXh7tkEpClpbk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1957612313-0c3389991ada4c5fb7c34fe68ea6e682.jpg" id="readingimg">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Homework_-_vector_maths.jpg/500px-Homework_-_vector_maths.jpg" id="hwimg">
       <img src="https://s3-media0.fl.yelpcdn.com/bphoto/71YzQuvvTVUdSBvgWCn3HA/348s.jpg" id="lagimg">
@@ -86,17 +86,17 @@ Select ONE Additional Feature to Add
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       //========================bullshit
-      $("#socimg").hide();
-      $("#aohgimg").hide();
-      $("#acotarimg").hide();
-      $("#babelimg").hide();
-      $("#lagbraryimg").hide();
-      $("#randomlunchroomimg").hide();
-      $("#outsideimg").hide();
-      $("#lagimg").hide();
-      $("#hwimg").hide();
-      $("#readingimg").hide();
-      $("#d&dimg").hide();
+      $("#socimg").hide().css("width", "200px");
+      $("#aohgimg").hide().css("width", "200px");
+      $("#acotarimg").hide().css("width", "200px");
+      $("#babelimg").hide().css("width", "200px");
+      $("#lagbraryimg").hide().css("width", "200px");
+      $("#randomlunchroomimg").hide().css("width", "200px");
+      $("#outsideimg").hide().css("width", "200px");
+      $("#lagimg").hide().css("width", "200px");
+      $("#hwimg").hide().css("width", "200px");
+      $("#readingimg").hide().css("width", "200px");
+      $("#dndimg").hide().css("width", "200px");
       //========================freetime Question jQuery Code
       $("#freetime-form").on("submit", function (event) {
         event.preventDefault();
@@ -106,15 +106,19 @@ Select ONE Additional Feature to Add
 
         if (answer === "freetime4") {
           $("#freetime-text").text("YESSSS!");
+        $("#lagimg").show(2000);
         } 
         if (answer === "freetime3"){
           $("#freetime-text").text("Bold of you to assume I do my homework.");
+          $("#hwimg").show(2000);
         }
         if(answer === "freetime2"){
           $("#freetime-text").text("That would be nice, but no.");
+          $("#readingimg").show(2000);
         }
         if(answer === "freetime1"){
           $("#freetime-text").text("I wishhhhhhhhh.");
+          $("#dndimg").show(2000);
         }
       });
 
@@ -127,12 +131,15 @@ Select ONE Additional Feature to Add
 
       if(answer === "lunch1"){
         $("#lunch-text").text("Sometimes, but not most days.");
+        $("#randomlunchroomimg").show(2000);
       }
       if (answer === "lunch2"){
         $("#lunch-text").text("YESSS!!!");
+        $("#lagbraryimg").show(2000);
       }
       if(answer === "lunch3"){
         $("#lunch-text").text("No, I don't see the sun.");
+        $("#outsideimg").show(2000);
       }
     })
       //=======================Book Question jQuery Code
@@ -144,15 +151,19 @@ Select ONE Additional Feature to Add
 
         if (answer === "book3") {
           $("#book-text").text("YESSSS!");
+          $("#babelimg").show(2000);
         } 
         if(answer === "book2") {
           $("#book-text").text("I have never read this book.");
+          $("#acotarimg").show(2000);
         }
         if(answer === "book1"){
           $("#book-text").text("I love this book, but no.");
+          $("#socimg").show(2000);
         }
         if(answer === "book4"){
           $("#book-text").text("I love this book, but no.");
+          $("#aohgimg").show(2000);
         }
       });
       

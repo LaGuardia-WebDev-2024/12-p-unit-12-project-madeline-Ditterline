@@ -1,7 +1,7 @@
 <!-- Unit 12 Project
 Requirements
 [yes] Two Interactive Drop-down Inputs 
-[  ] Standard Animation
+[yes] Standard Animation
 [  ] Custom Animation
 [yes] Include Three Images
 
@@ -106,40 +106,39 @@ Select ONE Additional Feature to Add
 
         if (answer === "freetime4") {
           $("#freetime-text").text("YESSSS!");
-        $("#lagimg").show(2000);
+        $("#lagimg").fadeIn("slow");
         } 
         if (answer === "freetime3"){
           $("#freetime-text").text("Bold of you to assume I do my homework.");
-          $("#hwimg").show(2000);
+          $("#hwimg").fadeIn("slow");
         }
         if(answer === "freetime2"){
           $("#freetime-text").text("That would be nice, but no.");
-          $("#readingimg").show(2000);
+          $("#readingimg").fadeIn("slow");
         }
         if(answer === "freetime1"){
           $("#freetime-text").text("I wishhhhhhhhh.");
-          $("#dndimg").show(2000);
+          $("#dndimg").fadeIn("slow");
         }
       });
 
       //=======================Lunch Question jQuery Code
       $("#lunch-form").on("submit", function(event){
         event.preventDefault();
-      
       var $answer = $("#lunch-answer");
       var answer = $answer.val();
 
       if(answer === "lunch1"){
         $("#lunch-text").text("Sometimes, but not most days.");
-        $("#randomlunchroomimg").show(2000);
+        $("#randomlunchroomimg").fadeIn("slow").animate(callback);
       }
       if (answer === "lunch2"){
         $("#lunch-text").text("YESSS!!!");
-        $("#lagbraryimg").show(2000);
+        $("#lagbraryimg").fadeIn("slow");
       }
       if(answer === "lunch3"){
         $("#lunch-text").text("No, I don't see the sun.");
-        $("#outsideimg").show(2000);
+        $("#outsideimg").fadeIn("slow");
       }
     })
       //=======================Book Question jQuery Code
@@ -151,19 +150,19 @@ Select ONE Additional Feature to Add
 
         if (answer === "book3") {
           $("#book-text").text("YESSSS!");
-          $("#babelimg").show(2000);
+          $("#babelimg").fadeIn("slow");
         } 
         if(answer === "book2") {
           $("#book-text").text("I have never read this book.");
-          $("#acotarimg").show(2000);
+          $("#acotarimg").fadeIn("slow");
         }
         if(answer === "book1"){
           $("#book-text").text("I love this book, but no.");
-          $("#socimg").show(2000);
+          $("#socimg").fadeIn("slow");
         }
         if(answer === "book4"){
           $("#book-text").text("I love this book, but no.");
-          $("#aohgimg").show(2000);
+          $("#aohgimg").fadeIn("slow");
         }
       });
       
